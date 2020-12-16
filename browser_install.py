@@ -121,7 +121,7 @@ class Install(object):
     def save_status(self):
         """Save the installed state of the various browsers"""
         if self.status:
-            with open(self.status_file, 'w') as f_out:
+            with open(self.status_file, 'wb') as f_out:
                 json.dump(self.status, f_out, indent=4)
 
     def chrome(self, channel):
